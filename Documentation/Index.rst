@@ -18,7 +18,7 @@
 EXT: Language Detection
 =======================
 
-Extension Key:  **rlmp\_language\_detection**
+Extension Key:  **sits\_language\_detection**
 
 * Copyright 2003-2006, Robert Lemke, <rl@robertlemke.de>
 * Copyright 2008-2009, Mathias Bolt Lesniak, LiliO Design, <mathias@lilio.com>

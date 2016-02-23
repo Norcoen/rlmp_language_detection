@@ -1,4 +1,4 @@
-rlmp_language_detection
+sits_language_detection
 =======================
 
 Changes for version 7.0.0
@@ -23,7 +23,7 @@ Changes for version 3.1.0
 Changes for version 3.0.0
 -------------------------
 
-TYPO3 extension rlmp_language_detection ready for 6.2
+TYPO3 extension sits_language_detection ready for 6.2
 
 * Removed all require_once() calls
 * Replaced deprecated function calls to the new namespaced ones

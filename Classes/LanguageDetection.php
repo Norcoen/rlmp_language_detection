@@ -12,7 +12,7 @@
  * The TYPO3 project - inspiring people to share!
  */
 
-namespace Rlmp\RlmpLanguageDetection;
+namespace Sits\SitsLanguageDetection;
 
 use TYPO3\CMS\Core\Database\DatabaseConnection;
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
@@ -22,7 +22,7 @@ use TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController;
 use TYPO3\CMS\Frontend\Plugin\AbstractPlugin;
 
 /**
- * Plugin 'Language Detection' for the 'rlmp_language_detection' extension.
+ * Plugin 'Language Detection' for the 'sits_language_detection' extension.
  *
  * @author    robert lemke medienprojekte <rl@robertlemke.de>
  * @author    Mathias Bolt Lesniak, LiliO Design <mathias@lilio.com>
@@ -35,17 +35,17 @@ class LanguageDetection extends AbstractPlugin {
 	/**
 	 * @var string
 	 */
-	public $prefixId = 'tx_rlmplanguagedetection_pi1';
+	public $prefixId = 'tx_sitslanguagedetection_pi1';
 
 	/**
 	 * @var string
 	 */
-	public $scriptRelPath = 'pi1/class.tx_rlmplanguagedetection_pi1.php';
+	public $scriptRelPath = 'pi1/class.tx_sitslanguagedetection_pi1.php';
 
 	/**
 	 * @var string
 	 */
-	public $extKey = 'rlmp_language_detection';
+	public $extKey = 'sits_language_detection';
 
 	/**
 	 * @var array
@@ -301,8 +301,8 @@ class LanguageDetection extends AbstractPlugin {
 				//Handle hooks
 				default:
 					//Hook for adding other language processing
-					if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rlmp_language_detection']['preferredLanguageHooks'])) {
-						foreach ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rlmp_language_detection']['preferredLanguageHooks'] as $key => $_funcRef) {
+					if (is_array($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sits_language_detection']['preferredLanguageHooks'])) {
+						foreach ($GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sits_language_detection']['preferredLanguageHooks'] as $key => $_funcRef) {
 							if ($key == $testOrder[$i]) {
 								$preferredLanguageOrPageUid = GeneralUtility::callUserFunction($_funcRef, $availableLanguagesArr, $this);
 								if ($preferredLanguageOrPageUid) {
@@ -381,7 +381,7 @@ class LanguageDetection extends AbstractPlugin {
 			}
 			header('Location: ' . $locationURL);
 			header('Connection: close');
-			header('X-Note: Redirect by rlmp_language_detection (' . $referrer . ')');
+			header('X-Note: Redirect by sits_language_detection (' . $referrer . ')');
 		}
 
 		if ($preferredLanguageOrPageUid) {
@@ -533,7 +533,7 @@ class LanguageDetection extends AbstractPlugin {
 			}
 		}
 		
-		//If our default language is not UID = 0 we can force rlmp to handle it as if it were
+		//If our default language is not UID = 0 we can force sits to handle it as if it were
 		if($this->conf['replaceDefaultLanguageUID'] != '' && $availableLanguages[strtolower($this->conf['replaceDefaultLanguageUID'])]) {
 		    $availableLanguages[$this->conf['replaceDefaultLanguageUID']] = 0;
 		}
@@ -629,11 +629,11 @@ class LanguageDetection extends AbstractPlugin {
     {
 	    $ret = false;  // Don't disable if there are no entries in sys_domain
         $domain = GeneralUtility::getIndpEnv('TYPO3_HOST_ONLY');
-        $res = $this->getDB()->exec_SELECTquery('tx_rlmplanguagedetection_disabledetection', 'sys_domain', 'domainName=\'' . $this->getDB()->fullQuoteStr($domain, 'sys_domain') . '\' AND hidden=0');
+        $res = $this->getDB()->exec_SELECTquery('tx_sitslanguagedetection_disabledetection', 'sys_domain', 'domainName=\'' . $this->getDB()->fullQuoteStr($domain, 'sys_domain') . '\' AND hidden=0');
         if($this->getDB()->sql_num_rows($res) == 1) {
             if($row = $this->getDB()->sql_fetch_assoc($res)) {
-                if(isset($row['tx_rlmplanguagedetection_disabledetection'])) {
-                    $ret = (bool) $row['tx_rlmplanguagedetection_disabledetection'];
+                if(isset($row['tx_sitslanguagedetection_disabledetection'])) {
+                    $ret = (bool) $row['tx_sitslanguagedetection_disabledetection'];
                 }
             }
         }

@@ -1,6 +1,6 @@
-plugin.tx_rlmplanguagedetection_pi1 = USER_INT
-plugin.tx_rlmplanguagedetection_pi1 {
-	userFunc = Rlmp\RlmpLanguageDetection\LanguageDetection->main
+plugin.tx_sitslanguagedetection_pi1 = USER_INT
+plugin.tx_sitslanguagedetection_pi1 {
+	userFunc = Sits\SitsLanguageDetection\LanguageDetection->main
 
 	defaultLang =
 	useOneTreeMethod = 1
@@ -53,5 +53,5 @@ plugin.tx_rlmplanguagedetection_pi1 {
 
 # Disable USER_INT when GP:L exists, and the extension anyway isn't needed.
 [globalVar=GP:L=0,GP:L>0]
-	plugin.tx_rlmplanguagedetection_pi1 >
+	plugin.tx_sitslanguagedetection_pi1 >
 [global]

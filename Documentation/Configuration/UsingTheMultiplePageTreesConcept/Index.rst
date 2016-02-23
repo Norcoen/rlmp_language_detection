@@ -26,7 +26,7 @@ field of your root template. Just have a look at the example:
 
 .. code-block:: typoscript
 
-   plugin.tx_rlmplanguagedetection_pi1 {
+   plugin.tx_sitslanguagedetection_pi1 {
       useOneTreeMethod = 0
       multipleTreesRootPages  {
          de = 216

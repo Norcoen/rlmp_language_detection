@@ -1,7 +1,7 @@
 <?php
 
 /***************************************************************
- * Extension Manager/Repository config file for ext "rlmp_language_detection".
+ * Extension Manager/Repository config file for ext "sits_language_detection".
  *
  * Auto generated 28-12-2012 23:24
  *

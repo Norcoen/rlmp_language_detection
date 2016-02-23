@@ -48,7 +48,7 @@ TypoScript:
 
 .. code-block:: typoscript
 
-   plugin.tx_rlmplanguagedetection_pi1 {
+   plugin.tx_sitslanguagedetection_pi1 {
       pathToDatabaseForGeoIPData = EXT:another_extension/path/to/file
    }
 

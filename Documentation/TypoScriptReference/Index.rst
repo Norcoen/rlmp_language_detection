@@ -79,7 +79,7 @@ TypoScript Reference
 
          ::
 
-            plugin.tx_rlmplanguagedetection_pi1 {
+            plugin.tx_sitslanguagedetection_pi1 {
                defaultLang = de
             }
 

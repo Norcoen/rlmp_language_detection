@@ -32,13 +32,13 @@ supported languages in the browser's settings and by IP address. This
 is where you can add more.
 
 The following line in ext\_localconf.php would include a hook function
-``test\_preferredLanguageHooks`` in the class ``Rlmp\\RlmpLanguageDetection\\LanguageDetection``.
+``test\_preferredLanguageHooks`` in the class ``Sits\\SitsLanguageDetection\\LanguageDetection``.
 
 It could be enabled by adding the string ``test`` to the testOrder TypoScript property.
 
 ::
 
-   $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['rlmp_language_detection']['preferredLanguageHooks']['test'] = 'Rlmp\\RlmpLanguageDetection\\LanguageDetection->testPreferredLanguageHooks';
+   $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['sits_language_detection']['preferredLanguageHooks']['test'] = 'Sits\\SitsLanguageDetection\\LanguageDetection->testPreferredLanguageHooks';
 
 The function must support the following arguments and return values:
 

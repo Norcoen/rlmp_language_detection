@@ -22,11 +22,11 @@ None reported at the moment.
 
 Please post bug reports to TYPO3 extension bugtracker:
 
-`http://forge.typo3.org/projects/extension-rlmp\_language\_detection
-<http://forge.typo3.org/projects/extension-rlmp_language_detection>`_
+`http://forge.typo3.org/projects/extension-sits\_language\_detection
+<http://forge.typo3.org/projects/extension-sits_language_detection>`_
 
 Find the code repository at:
 
-`https://github.com/spoonerWeb/rlmp\_language\_detection <https://github.com/spoonerWeb/rlmp_language_detection>`_
+`https://github.com/spoonerWeb/sits\_language\_detection <https://github.com/spoonerWeb/sits_language_detection>`_
 
 

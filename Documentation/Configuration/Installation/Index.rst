@@ -30,4 +30,4 @@ Extension Manager (EM) and click on the install button.
 
       page = PAGE
       ...
-      page.987 =< plugin.tx_rlmplanguagedetection_pi1
+      page.987 =< plugin.tx_sitslanguagedetection_pi1
