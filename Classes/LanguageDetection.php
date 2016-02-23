@@ -29,19 +29,11 @@ use TYPO3\CMS\Frontend\Plugin\AbstractPlugin;
  * @author    Joachim Mathes, punkt.de GmbH <t3extensions@punkt.de>
  * @author    Thomas Löffler <loeffler@spooner-web.de>
  * @author    Markus Klein <klein.t3@reelworx.at>
+ * @author    Frank Moll <mol@scheltwort-its.de>
+ * @author    Nikolas Köhler <nko@scheltwort-its.de>
  */
 class LanguageDetection extends AbstractPlugin {
-
-	/**
-	 * @var string
-	 */
-	public $prefixId = 'tx_sitslanguagedetection_pi1';
-
-	/**
-	 * @var string
-	 */
-	public $scriptRelPath = 'pi1/class.tx_sitslanguagedetection_pi1.php';
-
+	
 	/**
 	 * @var string
 	 */
