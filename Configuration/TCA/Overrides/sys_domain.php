@@ -3,7 +3,7 @@ defined('TYPO3_MODE') or die();
 
 use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-$ll_path = 'LLL:EXT:sits_language_detection/Resources/Private/Language/locallang_db.xlf:';
+$ll_path = 'LLL:EXT:sits_language_detection/Resources/Private/Language/locallang_db.xlf';
 $temporaryColumns  = array (
                 				'tx_sitslanguagedetection_disabledetection' => array (
                 					'exclude' => 1,
