@@ -624,9 +624,7 @@ class LanguageDetection extends AbstractPlugin {
         $res = $this->getDB()->exec_SELECTquery('tx_sitslanguagedetection_disabledetection', 'sys_domain', 'domainName=\'' . $this->getDB()->fullQuoteStr($domain, 'sys_domain') . '\' AND hidden=0');
         if($this->getDB()->sql_num_rows($res) == 1) {
             if($row = $this->getDB()->sql_fetch_assoc($res)) {
-                if(isset($row['tx_sitslanguagedetection_disabledetection'])) {
-                    $ret = (bool) $row['tx_sitslanguagedetection_disabledetection'];
-                }
+                $ret = (bool) $row['tx_sitslanguagedetection_disabledetection'];
             }
         }
         $this->getDB()->sql_free_result($res);
