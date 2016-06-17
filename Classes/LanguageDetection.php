@@ -221,6 +221,17 @@ class LanguageDetection extends AbstractPlugin {
 								}
 							}
 						}
+						//Set fallback Language if detected Language doesn't exits
+						if($this->conf['fallbackLanguage'] != '' && $preferredLanguageOrPageUid === FALSE) {
+							if (isset($availableLanguagesArr[$this->conf['fallbackLanguage']])) {
+								$preferredLanguageOrPageUid = $availableLanguagesArr[$this->conf['fallbackLanguage']];
+								if (TYPO3_DLOG) {
+									GeneralUtility::devLog('Found: ' . $preferredLanguageOrPageUid . ' (fallback mode)', $this->extKey);
+								}
+								break;
+							}
+						
+						}
 					}
 					break;
 				//GeoIP
